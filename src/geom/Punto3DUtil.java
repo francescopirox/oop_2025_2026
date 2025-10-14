@@ -29,7 +29,6 @@ public class Punto3DUtil {
         double xm=Punto3DUtil.getMiddleX(list);
         double ym=Punto3DUtil.getMiddleX(list);
         double zm=Punto3DUtil.getMiddleX(list);
-        for(double d : list[0])
 
         return new Cartesian3DPoint(xm, ym, zm);
     }
