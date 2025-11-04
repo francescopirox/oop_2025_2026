@@ -9,4 +9,6 @@ public interface Vagoni extends Comparable<Vagoni>{
     default int compareTo(Vagoni v){
         return identificatore().identificatore().compareTo(v.identificatore().identificatore());
     }
+
+    int hashcode();
 }

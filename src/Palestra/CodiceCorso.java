@@ -1,11 +1,15 @@
 package Palestra;
 
 import java.util.Objects;
-
+import java.util.regex.*;
 public class CodiceCorso {
+    private String cod;
     private String pre;
     private int num;
     private String fin;
+
+
+
     CodiceCorso(String pre, int num, String fin){
         if(pre.length() != 2 ){
             char[] vec= new char[pre.length()];

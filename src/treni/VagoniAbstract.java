@@ -34,13 +34,13 @@ public abstract class VagoniAbstract implements Vagoni{
             return false;
         }
         VagoniAbstract v=(VagoniAbstract) o;
-        return v.identificatore().equals(this.identificatore());
+        return v.identificatore().identificatore().equals(this.identificatore().identificatore());
 
     }
 
     @Override
     public int hashCode() {
-        return identificatore().hashCode();
+        return identificatore().identificatore().hashCode();
     }
 
     @Override
