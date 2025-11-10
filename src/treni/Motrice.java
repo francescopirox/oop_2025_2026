@@ -18,6 +18,16 @@ public class Motrice extends VagoniAbstract{
         return trazione;
     }
 
+    @Override
+    public int compareTo(Vagoni v) {
+        return super.compareTo(v);
+    }
+
+    @Override
+    public int hashcode() {
+        return 0;
+    }
+
     class Trazione{
         private Massa capacità;
         private String tipo;
