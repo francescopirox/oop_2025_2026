@@ -1,4 +1,6 @@
-public class StudenteImpl implements Studente{
+package studente;
+
+public class StudenteImpl implements Studente {
     private int Matricola;
     private String Nome;
     private double MediaVoti;
@@ -33,7 +35,7 @@ public class StudenteImpl implements Studente{
 
     @Override
     public String toString() {
-        return "StudenteImpl{" +
+        return "studente.StudenteImpl{" +
                 "Matricola=" + Matricola +
                 ", Nome='" + Nome + '\'' +
                 ", MediaVoti=" + MediaVoti +

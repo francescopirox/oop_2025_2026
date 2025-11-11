@@ -1,3 +1,5 @@
+package studente;
+
 public interface Studente {
     int getMatricola();
     String getNome();
