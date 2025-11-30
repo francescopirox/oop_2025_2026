@@ -13,10 +13,12 @@ public class BiblioPrestiti extends BiblioConcreta{
            for(Libro l:this){
                if(l.getTitolo().equalsIgnoreCase(titolo)) {
                    l.presta(utente);
+                   ret.add(l);
+                   inPrestito.add(l);
+                   break;
                }
-               ret.add(l);
-               inPrestito.add(l);
-               break;
+
+
            }
 
 
@@ -25,9 +27,10 @@ public class BiblioPrestiti extends BiblioConcreta{
            for(Libro l:this){
                if(l.getTitolo().equalsIgnoreCase(titolo)) {
                    l.presta(utente);
+                   inPrestito.add(l);
+                   break;
                }
-               inPrestito.add(l);
-               break;
+
            }
 
        }
@@ -35,7 +38,14 @@ public class BiblioPrestiti extends BiblioConcreta{
 
     @Override
     public void restituisciLibro(String titolo) {
-        super.restituisciLibro(titolo);
+        for(List<Libro> list :prestiti.values()){
+            for(Libro l:list){
+                if(l.getTitolo().equalsIgnoreCase(titolo)) {
+                    l.restituisci();
+                    list.remove(l);
+                }
+            }
+        }
     }
 
 
